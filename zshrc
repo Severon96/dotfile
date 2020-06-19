@@ -58,3 +58,6 @@ antigen apply
 
 # aliases
 if type "bat" > /dev/null; then alias cat='bat'; fi
+
+alias efimount='sudo diskutil mount disk0s1'
+alias configedit='cd /Users/doctor/Documents/git/ProperTree; ./ProperTree.command /Volumes/EFI/EFI/OC/config.plist;'
