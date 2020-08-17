@@ -96,6 +96,10 @@ brewCaskInstall franz
 
 brewCaskInstall deepl
 
+brewCaskInstall authy
+
+brewCaskInstall lastpass
+
 brewCaskInstall intellij-idea
 
 brewInstall python@3.8
