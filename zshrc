@@ -61,3 +61,24 @@ if type "bat" > /dev/null; then alias cat='bat'; fi
 
 alias efimount='sudo diskutil mount disk0s1'
 alias configedit='cd /Users/doctor/Documents/git/ProperTree; ./ProperTree.command /Volumes/EFI/EFI/OC/config.plist;'
+
+if ! command -v brew &> /dev/null
+then 
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+
+echo Installing iterm
+brew cask install iterm2
+
+echo Installing Alfred
+brew cask install alfred
+
+echo Installing Kext-Updater
+brew cask install kext-updater
+
+echo Installing Google-Chrome
+brew cask install google-chrome
+
+echo Installing Visual-Studio-Code
+brew cask install visual-studio-code
+
+fi
