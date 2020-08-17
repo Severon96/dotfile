@@ -3,9 +3,14 @@
 # Description: A simple zshrc to aid productivity
 #
 
-brewInstall() {
+brewCaskInstall() {
    echo Installing $1
    brew cask install $1
+}
+
+brewInstall() {
+   echo Installing $1
+   brew install $1
 }
 
 # download antigen if needed
@@ -71,27 +76,31 @@ if ! command -v brew &> /dev/null
 then 
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
-brewInstall iterm2
+brewCaskInstall iterm2
 
-brewInstall alfred
+brewCaskInstall alfred
 
-brewInstall kext-updater
+brewCaskInstall kext-updater
 
-brewInstall google-chrome
+brewCaskInstall google-chrome
 
-brewInstall visual-studio-code
+brewCaskInstall visual-studio-code
 
-brewInstall sublime-merge
+brewCaskInstall sublime-merge
 
-brewInstall spotify
+brewCaskInstall spotify
 
-brewInstall discord
+brewCaskInstall discord
 
-brewInstall franz
+brewCaskInstall franz
 
-brewInstall deepl
+brewCaskInstall deepl
 
-brewInstall intellij-idea
+brewCaskInstall intellij-idea
+
+brewInstall python@3.8
+
+brewInstall npm
 
 fi
 
