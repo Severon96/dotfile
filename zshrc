@@ -3,6 +3,11 @@
 # Description: A simple zshrc to aid productivity
 #
 
+brewInstall() {
+   echo Installing $1
+   brew cask install $1
+}
+
 # download antigen if needed
 if [[ ! -a $HOME/antigen.zsh ]]; then
     echo Antigen not found! Installing...
@@ -66,19 +71,28 @@ if ! command -v brew &> /dev/null
 then 
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
-echo Installing iterm
-brew cask install iterm2
+brewInstall iterm2
 
-echo Installing Alfred
-brew cask install alfred
+brewInstall alfred
 
-echo Installing Kext-Updater
-brew cask install kext-updater
+brewInstall kext-updater
 
-echo Installing Google-Chrome
-brew cask install google-chrome
+brewInstall google-chrome
 
-echo Installing Visual-Studio-Code
-brew cask install visual-studio-code
+brewInstall visual-studio-code
+
+brewInstall sublime-merge
+
+brewInstall spotify
+
+brewInstall discord
+
+brewInstall franz
+
+brewInstall deepl
+
+brewInstall intellij-idea
 
 fi
+
+
